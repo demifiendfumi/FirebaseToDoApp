@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 // This method will get fired everytime the "message" value updates in the realtime database. We're getting our data back as a DataSnapshot
                 Message message = dataSnapshot.getValue(Message.class);
                 if (message != null) {
-                    tvMessageTitle.setText(message.getTitle());
-                    tvMessageDate.setText(message.getDate());
-                    tvMessageDays.setText(String.valueOf(message.getNumOfDays()));
-                    tvMessageComplete.setText(message.getCompleted());
+                    tvMessageTitle.setText("Title: " + message.getTitle());
+                    tvMessageDate.setText("Date: " + message.getDate());
+                    tvMessageDays.setText("NumOfDays: " + String.valueOf(message.getNumOfDays()));
+                    tvMessageComplete.setText("Completed? " + message.getCompleted());
                 }
             }
 
